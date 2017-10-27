@@ -1,0 +1,844 @@
+body,.page, .page-group {
+    background: #14171a;
+    color: #f3f3f3
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,sans-serif;
+}
+
+.f-rel {
+    position: relative;
+}
+
+.f-center {
+    text-align: center!important;
+}
+
+.f-left {
+    text-align: left!important;
+}
+
+.f-right {
+    text-align: right!important;
+}
+
+.f-fl {
+    float: left;
+}
+
+.f-fr {
+    float: right;
+}
+
+.f-clear:after {
+    content: " ";
+    clear: both;
+}
+
+.f-nomargin {
+    margin: 0!important;
+}
+
+.magenta {
+    color: #ff007a!important;
+}
+
+.green {
+    color: #70a800!important;
+}
+
+.orange {
+    color: #f0b90b!important;
+}
+
+.magenta .gray {
+    color: #ff007a
+}
+
+.green .gray {
+    color: #619200
+}
+
+html {
+    -webkit-text-size-adjust: none
+}
+
+@font-face {
+    font-family: "myfont";
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+ 
+@font-face {
+ font-family: "pinfang";
+  src: url('../font/font.ttf') format('truetype');
+  }
+
+
+.font {
+    font-family: "myfont" !important;
+    font-size: 0.4rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: 0.125rem;
+    vertical-align: middle;
+}
+
+/*.content{overflow: visible;}*/
+.font-LTC:before {
+    content: "\e640";
+}
+
+/*LTC*/
+.font-BTC:before {
+    content: "\e641";
+}
+
+/*BTC*/
+.font-ETH:before {
+    content: "\e63f";
+}
+
+/*ETH*/
+.font-kline:before {
+    content: "\e602";
+}
+
+/*k缁惧灝娴�*/
+.font-depth:before {
+    content: "\e612";
+}
+
+/*濞ｅ崬瀹抽崶锟�*/
+.font-depth:before {
+    content: "\e612";
+}
+
+/*濞ｅ崬瀹抽崶锟�*/
+.font-up:before {
+    content: "\e60a";
+}
+
+/*濞戯拷*/
+.font-down:before {
+    content: "\e609";
+}
+
+/*鐠猴拷*/
+.font-logout:before {
+    content: "\e62f";
+}
+
+/*閹恒劌鍤�*/
+.font-menu:before {
+    content: "\e618";
+}
+
+/*閼挎粌宕�*/
+.font-close:before {
+    content: "\e63c";
+}
+
+/*閼挎粌宕�*/
+.font-shangzhang:before {
+    content: "\e61d";
+}
+
+/*閸氭垳绗傜粻顓炪仈*/
+.font-xiadie:before {
+    content: "\e61c";
+}
+
+/*閸氭垳绗呯粻顓炪仈*/
+.font-duigou:before {
+    content: "\e647";
+}
+
+/*鐎电懓瀣�*/
+.font-xiajiantou:before {
+    content: "\e66d";
+}
+
+/*閸氭垳绗呮稉澶庮潡*/
+.font-kxian:before {
+    content: "\e61b";
+}
+
+/*k缁惧灝娴樼搾瀣◢*/
+.font-xia:before {
+    content: "\e60e";
+}
+
+.font-copy:before {
+    content: "\e6fa";
+}
+
+.font-ewm:before {
+    content: "\e9c4";
+}
+
+.font-add:before {
+    content: "\e629";
+}
+
+.font-diannao:before {
+    content: "\e621";
+}
+
+.font-downjt:before {
+    content: "\e642";
+}
+
+.font-funds:before {
+    content: "\e607";
+}
+
+.font-ex:before {
+    content: "\e611";
+}
+
+/*婢舵挳鍎�*/
+header.bar {
+    height: 2.8rem;
+    background: #1c2226;
+    z-index: 99999;
+}
+
+header.bar:after {
+    height: 0;
+}
+
+header.bar .logo {
+    height: 1.1rem;
+}
+
+header.bar .pull-left,header.bar .pull-right {
+    line-height: 100%;
+}
+
+header.bar .pull-left {
+    margin-top: 0.85rem;
+}
+
+header.bar .pull-right {
+    margin-top: 0.75rem;
+}
+
+header.bar .pull-right .btn {
+    display: inline-block;
+    border-radius: 0.1rem;
+    padding: 0 0.5rem;
+    height: 1.25rem;
+    font-size: 0.6rem;
+    color: #fff;
+}
+
+header.bar .pull-right .btn a {
+    font-size: 0.7rem;
+    color: #fff;
+    line-height: 1.25rem;
+    margin: 0 0.7rem;
+}
+
+header.bar .pull-right .btn a:last-of-type {
+    margin-right: 0;
+}
+
+header.bar .pull-right .icon {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+header.bar .icon {
+    padding: 0;
+}
+
+/*濞撴皜鍡欑彾闁哄稄鎷�*/
+.panel {
+    width: 14rem
+}
+
+body.with-panel-right-reveal .page {
+    -webkit-transform: translate3d(-14rem,0,0);
+    transform: translate3d(-14rem,0,0);
+}
+
+.panel-right {
+    background: #1c2226!important;
+}
+
+.panel-right .userInfo {
+    background: #1c2226;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: 1.6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.panel-right .userInfo img {
+    height: 1.25rem;
+    vertical-align: middle;
+    margin-right: 0.175rem;
+}
+
+.panel-right .userInfo {
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.panel-right .userInfo a {
+    font-size: 0.75rem;
+    color: #fff;
+    margin: 0 0.625rem;
+    vertical-align: middle;
+}
+
+.panel-right .navs {
+    padding: 2.5rem 0;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.panel-right .navs ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-bottom: 1px solid #23292f;
+    box-shadow: 0px 1px #23292f;
+}
+
+.panel-right .navs ul:first-of-type {
+    border-top: none;
+}
+
+.panel-right .navs ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.8rem;
+    color: #fff;
+    padding-left: 1.6rem;
+}
+
+.panel-right .navs ul li.cur a {
+    color: #f0b90b;
+    background: #1d2227;
+}
+
+.languages .languagestip {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    color: #999;
+    padding-left: 2rem;
+}
+
+.languages .cur {
+    color: #fff!important
+}
+
+.languages img {
+    height: 0.975rem;
+    margin-left: 1rem;
+    vertical-align: sub;
+}
+
+.panel-right .logout {
+    background: #1c2226;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: 1.6rem;
+    font-size: 0.8rem;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid #1c2226;
+    box-shadow: 0px 1px #363f47 inset;
+}
+
+.panel-right .logout .font {
+    font-size: 1rem;
+    vertical-align: baseline;
+    margin-right: 0.2rem;
+}
+
+/*tab闁兼寧绮屽畷锟�*/
+.buttons-tab {
+    background: #1a1e22;
+}
+
+.buttons-tab .button {
+    height: 1.75rem;
+    line-height: 1.75rem;
+    font-size: 0.75rem;
+    color: #fff;
+    border-color: #1a1e22
+}
+
+.buttons-tab .button.active {
+    color: #f0b90b;
+    background-color: #14171a;
+    border-color: #14171a
+}
+
+.buttons-tab:after {
+    background-color: #1a1e22
+}
+
+/*闁圭顦甸幐锟�*/
+.button {
+    border-radius: 0.1rem!important;
+}
+
+.button-fill {
+    background: #ddac37!important;
+    color: #fff!important;
+}
+
+.button.disabled {
+    background: #92a0ad!important;
+}
+
+.buttons-row {
+    margin: 0;
+}
+
+.button.button-big {
+    height: 2rem;
+    font-size: 0.75rem;
+}
+
+.button.button-fill.button-big {
+    line-height: 2rem;
+}
+
+/*閹绘劗銇�*/
+.alert {
+    width: 100%;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    font-size: 0.6rem;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 2.8rem;
+    z-index: -1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.alert .font-close {
+    font-size: 0.7rem;
+    position: absolute;
+    top: 0rem;
+    right: 0.4rem;
+    color: #999;
+    font-weight: bold;
+}
+
+.alert.alert-warn {
+    background: #f4e2e2;
+    color: #ff0000;
+}
+
+.alert.slideDown {
+    opacity: 1;
+    z-index: 9999;
+    -webkit-transform: translateX(0);
+    -o-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+/*loading*/
+.loading {
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 999999;
+    margin: -1.5rem 0 0 -1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    background: rgba(0,0,0,0.8);
+    border-radius: 0.1rem;
+}
+
+.loading img {
+    vertical-align: middle;
+    }
+
+/*input*/ input[type="text"],input[type="password"] {
+    border-radius: 0!important;
+    -webkit-appearance: none
+}
+
+.input-group {
+    width: 100%;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    text-align: center;
+    border: 1px solid #262d33;
+    position: relative;
+    padding: 0 0.2rem;
+    background-color: #1a1e22
+}
+
+.input-group .input-p,.input-group .input-u {
+    display: inline-block;
+    width: 1.9rem;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    position: absolute;
+    top: 0;
+}
+
+.input-group .input-p {
+    left: 0;
+}
+
+.input-group .input-u {
+    right: 0;
+}
+
+.input-group input {
+    display: inline-block;
+    width: 100%;
+    height: 1.75rem;
+    border: none;
+    background: none;
+    font-size: 0.7rem;
+    margin-top: -0.1rem;
+    vertical-align: super;
+}
+
+.filed .Validform_checktip {
+    height: 0.9rem;
+    margin: 0;
+    padding: 0;
+    line-height: 0.9rem;
+}
+
+.filed input.ipt {
+    height: 2.25rem;
+    width: 100%;
+    padding: 0 0.6rem;
+    font-size: 0.6rem;
+}
+
+/*select*/
+.select {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.select input[type="checkbox"] {
+    display: none;
+}
+
+.select label {
+    display: inline-block;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    font-size: 0.95rem;
+    color: #ffffff;
+    text-align: center;
+    background: none;
+}
+
+.select label span {
+    margin-right: 0.25rem;
+    vertical-align: middle;
+}
+
+.select ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #2a3139;
+    padding: 0 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 2.1rem;
+    z-index: 99999;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: none;
+    opacity: 0;
+    border: 1px solid #3b424a;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.select ul:before {
+    content: " ";
+    display: inline-block;
+    height: 0;
+    border: 0.5rem solid transparent;
+    border-bottom-color: #2a3139;
+    position: absolute;
+    top: -1rem;
+    right: 0.25rem;
+}
+
+.select ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 2.05rem;
+    line-height: 2.05rem;
+    font-size: 0.7rem;
+    color: #f3f3f3;
+    border-bottom: 1px solid #3b424a;
+}
+
+.select ul li:last-of-type a {
+    border: none;
+}
+
+.select input[type=checkbox]:checked ~ul {
+    display: block;
+    opacity: 1;
+}
+
+/*select input*/
+.select-input {
+    width: 100%;
+    height: 2.25rem;
+    background: #1d2227;
+    position: relative;
+    display: inline-block;
+}
+
+.select-input input[type=text] {
+    width: 100%;
+    height: 100%;
+    background: #1d2227;
+    border: none;
+    font-size: 0.6rem;
+    border: 1px solid #323c45;
+    padding: 0 1.6rem 0 0.6rem;
+}
+
+.select-input .font-xia {
+    color: #fff;
+    font-size: 0.7rem;
+    display: inline-block;
+    width: 1.6rem;
+    height: 100%;
+    line-height: 2.25rem;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+}
+
+.select-input ul {
+    width: 100%;
+    max-height: 8rem;
+    overflow-y: auto;
+    background: #1d2227;
+    border: 1px solid #323c45;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.25rem;
+    z-index: 99;
+    margin: -2px 0 0;
+    padding: 0;
+}
+
+.select-input ul>li {
+    list-style: none;
+    padding: 0 0.6rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    font-size: 0.6rem;
+    color: #fff;
+    border-bottom: 1px solid #323c45;
+}
+
+.select-input ul>li:last-of-type {
+    border: none;
+}
+
+.select-input ul>li:hover,.select-input ul>li.cur {
+    background: #323c45;
+}
+
+.select-input.disabled .font-xia {
+    color: #666;
+}
+
+/*table*/
+.table {
+    width: 100%;
+    max-width: 100%;
+}
+
+.table td,.table th {
+    padding: 0 0.3rem;
+}
+
+.table th {
+    font-size: 0.6rem;
+    color: #999;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: normal;
+    background: #fbfbfb;
+}
+
+.table td {
+    font-size: 0.65rem;
+    color: #333;
+    padding: 0.7rem 0.2rem;
+}
+
+.table td .button {
+    font-size: 0.6rem;
+    padding: 0 0.2rem;
+    height: 1rem;
+    line-height: 1rem;
+    border-radius: 0.1rem;
+}
+
+.table tr:nth-of-type(even) {
+    background: #fff;
+}
+
+.table tr:nth-of-type(odd) {
+    background: #fbfbfb;
+}
+
+.table .excess {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.table .excess .excess-items {
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    font-size: 0.6rem;
+    color: #999;
+}
+
+.table .excess .excess-items span {
+    margin-right: 0.25rem;
+}
+
+/*閺夆晜绋戠�规娊寮堕敓锟�*/
+.progress {
+    width: 100%;
+}
+
+.progress .progress-inner {
+    padding: 0.05rem;
+    border: 1px solid transparent;
+}
+
+.progress .progress-bar {
+    height: 0.7rem;
+}
+
+.progress .progress-tip {
+    margin-top: 0.45rem;
+    font-size: 0.7rem;
+    color: #333;
+}
+
+.progress.progress-warning .progress-bar {
+    background: #ddac37;
+}
+
+.progress.progress-warning .progress-inner {
+    border-color: #ddac37;
+}
+
+/*閺冪姾顔囪ぐ锟�*/
+.noData {
+    text-align: center;
+    margin-top: 8.625rem;
+}
+
+.noData img {
+    width: 3.75rem;
+}
+
+.noData p {
+    margin: 0;
+    color: #999;
+    font-size: 0.65rem;
+}
+
+/*娑撹鍞寸�癸拷*/
+header.bar ~.content {
+    top: 2.8rem;
+    overflow-x: hidden;
+}
+
+.noData {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+.bankcon.show {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+
+.modal,.modal-inner,.modal-button {
+    border-radius: 0 !important;
+    background-color: white;
+    color: #333333;
+}
+
+.modal-button {
+    color: #e8b342;
+}
+
+.modal.toast {
+    padding: 0.5rem;
+    height: auto;
+    line-height: 1.5;
+    min-width: 6.75rem;
+}
+
+.modal-button:after,.modal-inner:after {
+    background: #f0f0f0;
+}

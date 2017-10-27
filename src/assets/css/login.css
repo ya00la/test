@@ -1,0 +1,398 @@
+/*login*/
+html,body{overflow:hidden;overflow-y:auto;}
+body,.page, .page-group{color:#333333;background: #f4f4f4}
+.loginInner{
+    padding:0 0.875rem;
+    background-color: #f4f4f4;
+}
+.loginInner .loginTitle{
+    text-align: center;
+    color:#333;
+    font-size: 1rem;
+    line-height:1rem;
+    margin:2rem 0;
+}
+.loginInner input[type=text],.loginInner input[type=button],.loginInner input[type=submit],.loginInner input[type=password],.loginInner input.btn{
+    
+    width: 100%;
+    height: 2.25rem;
+    border:1px solid #d3d3d3;
+    padding-left: 0.8rem;
+    color:#333;
+    font-size: 0.65rem;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ccc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #ccc;
+}
+
+.loginInner .email,.loginInner .password{
+    position: relative;
+}
+
+
+.loginInner .Validform_checktip{height:1rem;line-height:1rem;font-size:0.6rem;}
+.loginInner .email .focusTip,.loginInner .password .focusTip{
+    position: absolute;
+    bottom: 0.65rem;
+    left: 0.85rem;
+    color:#ccc;
+    font-size: 0.6rem;
+}
+.loginInner .yzm{
+    padding:0.4rem 0 0.4rem 0;
+    border:1px solid #d3d3d3;
+    background-color: #fff;
+    vertical-align: middle;
+}
+.loginInner .yzm input{
+    width: 100%;
+    height: 1.25rem;
+    border-width: 0px;
+    padding-left: 0.8rem;
+    color:#333;
+    font-size: 0.65rem;
+    border-right: 1px solid #d3d3d3;
+    width: 8.9rem;
+}
+.loginInner .yzm .ewmImg{
+    width: 4rem;
+    height: 1.25rem;
+}
+.loginInner .yzm .yzmInput{
+    float: left;
+}
+.loginInner .yzm .refresh{
+    width: 0.95rem;
+    height: 1.25rem;
+    vertical-align: middle;
+}
+.loginInner .loginBtn input{
+    border-width: 0;
+    padding: 0;
+    color:#fff;
+    font-size: 0.8rem;
+    background-color: #92a0ad;
+    text-align: center;
+}
+.loginInner .forgot{
+    text-align: center;
+    font-size: 0.65rem;
+    padding: 0.6rem 0;
+}
+.loginInner .forgot a{
+    color:#ddac37;
+}
+.loginInner .register{
+    text-align: center;
+    font-size: 0.65rem;
+    margin-top:0.8rem;
+}
+.loginInner .register .regRedirect{
+    color:#ddac37;
+}
+
+
+.loginInner .nc-container .nc_scale{height:2.25rem;border:1px solid #d3d3d3;background: #ececec;}
+.loginInner .nc-container .nc_scale span.nc-lang-cnt,
+.loginInner .nc-container .nc_scale .btn_slide
+{height:100%;line-height:2.25rem;color:#999;font-size:0.65rem;}
+.loginInner .nc-container .nc_scale span.nc-lang-cnt{margin-right:-2.25rem;color:#ff5252;}
+.loginInner .nc-container .nc_scale .btn_slide{border:none;border-right:1px solid #d3d3d3;width:2.25rem;text-align:center;font-size:1rem;}
+.loginInner .nc-container .imgCaptcha{width:100%!important;top:2.2rem;}
+.loginInner .nc-container .nc_scale .btn_warn{color:#ff5252;}
+.loginInner .nc-container .nc_scale .scale_text2{text-align:center}
+.loginInner .nc-container .nc_scale .scale_text2 .nc-lang-cnt{color:#fff;text-align:center;margin-left:-2.25rem;margin-right:0;}
+.loginInner .nc-container .nc_scale .scale_text2 .nc-lang-cnt[data-nc-lang='_yesTEXT']{margin:0;}
+.loginInner .nc-container .nc_scale .nc_ok, .nc-container .nc_scale .nc_bg{background:#66bb6a;}
+.loginInner  .nc-container .nc_scale .btn_ok{border:none;border-left:1px solid #d3d3d3;height:100%;width:2.15rem;text-align:center;line-height:2.25rem;}
+.loginInner .nc-container .imgCaptcha .imgCaptcha_text,
+.loginInner .nc-container .imgCaptcha .imgCaptcha_img,
+.loginInner .nc-container .imgCaptcha .imgCaptcha_text input{
+  margin:0;
+}
+.loginInner .nc-container .imgCaptcha .imgCaptcha_text input,
+.loginInner .nc-container .imgCaptcha .imgCaptcha_text input:focus{
+  height:40px;
+  width:120px;
+  color:#333;
+}
+.loginInner .nc-container .imgCaptcha .imgCaptcha_text{height:auto;line-height:100%;}
+.loginInner .nc-container .imgCaptcha{padding:0.5rem;}
+.loginInner .nc-container .imgCaptcha .imgCaptcha_btn{margin:0.5rem 0 0;width:100%;}
+.loginInner .nc-container .imgCaptcha .nc_scale_submit{width:100%;height:40px;line-height:40px;background:#ddac37;}
+.loginInner .nc-container .imgCaptcha .nc_scale_submit .nc-lang-cnt{margin:0;font-size:0.7rem;color:#fff;}
+.loginInner .nc_iconfont.nc_btn_1{top:15px;right:10px;}
+.nc-container .nc_captcha_img_text .icon_close{float:none;}
+.nc-container .imgCaptcha .nc_captcha_img_text{padding:0;margin-top:-15px;}
+
+/*2FA code*/
+.faCode .loginTitle{
+    padding:1.75rem 0;
+}
+.faCode .faCodeInput{
+    padding:0 0 2rem 0;
+}
+
+/*support*/
+.support .email{
+    margin-bottom:0;
+}
+.support .email .des{
+    font-size: 0.65rem;
+    color:#999;
+    padding-bottom: 0.35rem;
+}
+.support .email .con{
+    font-size: 0.8rem;
+    color:#333;
+}
+.support .advice{
+    padding-bottom: 1.6rem;
+}
+.support .advice textarea{
+    width: 100%;
+    border: 1px solid #d3d3d3;
+    height: 5.15rem;
+    font-size: 0.65rem;
+    padding:0.6rem 0 0 0.65rem;
+    overflow:hidden;
+    resize:none;
+}
+.iTitle{
+    padding-top: 0.3rem;
+    height: 2rem;
+    color:#333;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.iCon{
+    height: 1.4rem;
+    color:#999;
+    font-size: 0.8rem;
+}
+.modal-button{
+    color:#ddac37 !important;
+}
+.modal-inner,.modal-button{
+    background-color: #fff;
+}
+.modal-button{
+    font-size: 0.8rem;
+}
+
+.register .yzm{
+    margin-bottom:0;
+}
+.register .agreement{
+    display: block;
+    height:1.5rem;
+    line-height:1.5rem;
+    color:#333;
+    font-size:0.6rem;
+}
+.register .agreement span{
+    font-size: 0.6rem;
+    color:#333;
+}
+.register .agreement a{
+    font-size: 0.6rem;
+    color:#ddac37;
+}
+.register .agreement input{
+    vertical-align: middle;
+    margin:-2px 0.3rem 0 0;
+}
+.register .loginBtn input{
+    background-color: #ddac37;
+}
+
+.resetPass .loginBtn input{
+    background-color: #ddac37;
+}
+
+.resetNewPass .loginBtn input{
+    background-color: #ddac37;
+}
+
+.verifyEmail{
+    padding: 0 1.8rem;
+}
+.verifyEmail .icon{
+    text-align: center;
+    width: 100%;
+    padding:5.15rem 0 0.4rem 0;
+}
+.verifyEmail .icon img{
+    width: 3.25rem;
+    height: 3.25rem;
+}
+.verifyEmail .header{
+    text-align: center;
+    color:#333;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding-bottom: 0.75rem;
+}
+.verifyEmail .des{
+    text-align: center;
+    font-size: 0.65rem;
+}
+.verifyEmail .desdec{
+    text-align: center;
+    
+}
+.verifyEmail .des p{
+    margin:0;
+    color:#333;
+}
+
+.loginNow .header,.verifyEmailRegister .header{
+    padding-bottom: 0.4rem;
+}
+.loginNow .des p{
+    font-size: 0.75rem;
+    color:#ddac37;
+}
+.verifyEmailRegister .des p{
+    font-size: 0.75rem;
+    color:#333;
+}
+.verifyEmailRegister .header{
+    padding-bottom: 1rem;
+}
+
+.chatRoom .chatCon{
+    padding:0 0.85rem 3.8rem 0.85rem;
+}
+.chatRoom .chatEnter{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding:0.6rem 0.9rem;
+}
+.chatRoom .chatEnter dl {
+    overlow: hidden;
+    margin-bottom: 8px;
+}
+.chatRoom .chatEnter dl dt {
+    color: #666;
+    font-size: 12px;
+    float: left;
+    font-weight: bold;
+    margin-right: 2px;
+}
+.chatRoom .chatEnter dl dd {
+    font-size: 12px;
+    color: #b7b7b7;
+    line-height: 18px;
+    word-break: break-word;
+}
+ .chatRoom .chatEnter .ceL{
+    float: left;
+}
+.chatRoom .chatEnter .send img{
+    width: 1.5rem;
+    height: 2rem;
+}
+.chatRoom .chatEnter .con input{
+    width: 14.95rem;
+    height: 2rem;
+    border:1px solid #ddac37;
+    padding:0.6rem;
+}
+.chatRoom .chatEnter .send{
+    margin-left:0.5rem;
+} 
+.chatRoom .chatCon p{
+    margin: 0 0 0.8rem 0;
+    font-size: 0.65rem;
+}
+.chatRoom .chatCon p .name{
+    color:#333;
+}
+.chatRoom .chatCon p .con{
+    color:#999;
+}
+
+.yzmWrap{
+    width: 4rem;
+    height: 1.25rem;
+    display: inline-block;
+    margin-left:0.5rem;
+}
+body #login-form .BDC_CaptchaImageDiv,body #register-form .BDC_CaptchaImageDiv,body #forgotPwd1-form .BDC_CaptchaImageDiv,body #resetPwd-form .BDC_CaptchaImageDiv{width: 4rem!important;height: 1.25rem!important;}
+body #login-form .BDC_CaptchaImageDiv img,body #register-form .BDC_CaptchaImageDiv img,body #forgotPwd1-form .BDC_CaptchaImageDiv img,body #resetPwd-form .BDC_CaptchaImageDiv img{width:100%;height:100%;}
+body #login-form .BDC_CaptchaImageDiv a,body #register-form .BDC_CaptchaImageDiv a,body #forgotPwd1-form .BDC_CaptchaImageDiv a,body #resetPwd-form .BDC_CaptchaImageDiv a{display:block!important;height:100%;}
+#exampleCaptcha_ReloadLink,#exampleCaptcha_SoundLink{margin:0!important;}
+#exampleCaptcha_ReloadLink{margin-top:-2px!important;}
+#exampleCaptcha_ReloadLink img,#exampleCaptcha_SoundLink img{width:18px!important;}
+.BDC_SoundLink{display:none!important;}
+
+
+.verifyEmail .des p{
+    font-size: 0.75rem;
+}
+.verifyEmail .desdec p{
+    color:#333;
+    font-size: 0.65rem;
+    text-align: center;
+}
+.verifyEmail .desdec a{
+    color:#e8b342;
+    font-size: 0.65rem;
+    text-align: center;
+    text-decoration: underline;
+}
+.loginInner .loginBtn input.btnGray{background-color: #92a0ad;}
+.loginInner .loginBtn input.btnYellow{background-color: #ddac37;}
+
+/*terms of use*/
+.termUse{
+    padding: 0 0.85rem;
+    background-color: #f4f4f4;
+}
+.termUse .tuTitle{
+    font-size: 1rem;
+    text-align: center;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    color:#333;
+}
+.termUse .tuDate{
+    color:#ddac37;
+    font-size: 0.6rem;
+}
+.termUse .tuCon p{
+    color:#666;
+    font-size: 0.6rem;
+    line-height: 1rem;
+}
+
+.ref{background: #f3f3f3!important}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

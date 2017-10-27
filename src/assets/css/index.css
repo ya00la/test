@@ -1,0 +1,60 @@
+.page-index .products{margin: 0.5rem 0 0.1rem 0;}
+.kline-params{padding:0 0.3rem;}
+.kline-params .lastPrice{text-align:center;line-height:100%;font-size:1rem;color:#777777;}
+.kline-params .lastPrice span{vertical-align:middle;}
+.kline-params .lastPrice .font{font-size:0.8rem;}
+.kline-params .lastPrice .transMoney{font-weight:normal;color:#777!important;font-size:0.6rem;}
+.kline-params .priceChange{font-size: 0.6rem;text-align:center;color:#777777;line-height: 0.8rem;}
+.kline-params table{width:100%;margin:0.6rem 0 0.9rem 0;}
+.kline-params table th,.kline-params table td{text-align:left;line-height: 0.8rem;}
+.kline-params table th{font-weight:normal;font-size:0.7rem;color:#999;}
+.kline-params table td{font-size:0.7rem;color:#ffffff;}
+.kline-tab{background-color: #1d2226;border-bottom: 1px solid #2c343c}
+.kline-tab span{line-height:100%;display:inline-block;vertical-align:middle;padding:0.6rem 0.6rem;background:#1d2226;font-size:0.6rem;color:#999;margin-bottom: 1px;}
+.kline-tab span.cur{background:#191d21;color:#f0b90b;border-right: 1px solid #2c343c;border-left: 1px solid #2c343c;margin-bottom: -3px;}
+.kline-tab span .font{font-size:0.8rem;vertical-align:baseline;}
+.bottom-btns{position:fixed;left:0;bottom:0;width:100%;height:2.5rem;padding:0.375rem 0.6rem;background:#2b333a;overflow:hidden;}
+.bottom-btns a{display:inline-block;width:48%;height:1.75rem;text-align:center;line-height:1.75rem;border-radius:0.075rem;font-size:0.75rem;color:#fff;}
+.bottom-btns a.buy{background:#619200;float:left;}
+.bottom-btns a.sell{background:#ff007a;float:right;}
+.trades{background:#14171a;padding: 0 15px;}
+.trades-title{height:1.8rem;line-height:1.8rem;color:#ffffff;font-size:0.7rem;border-bottom:1px solid #272f36;}
+.trades .table tr{background:none!important;}
+.trades .table th,.trades .table td{padding:0 0;border:none;font-size: 0.7rem}
+.trades .table th{background:#14171a;color:rgba(255,255,255,0.5);padding:3px 0;}
+.trades .table td{height:1.1rem;line-height:1.1rem;background:#14171a;font-size:0.65rem;color:#fff;}
+.trades .table th .font{margin-right:0;}
+
+.download-fixed{position:fixed;z-index:222;left:0;bottom:0;width:100%;height:2.8rem;background:#fff;}
+.download-fixed .download-fixed-left{float:left;height:auto;overflow:hidden;}
+.download-fixed .download-fixed-left dl{display:block;height:auto;overflow:hidden;margin:0;padding:0;}
+.download-fixed .download-fixed-left dl dt{display:inline-block;float:left;}
+.download-fixed .download-fixed-left dl dt img{width:2rem;margin:0.375rem 0.75rem 0 1.375rem;}
+.download-fixed .download-fixed-left dl dd{display:inline-block;float:left;margin:0;padding:0;height:2rem;margin-top:0.6rem;}
+.download-fixed .download-fixed-left dl dd p{padding:0;margin:0;color:#f0b90b;line-height:0.85rem;font-size:0.65rem;}
+.download-fixed .download-fixed-right{float:right;height:auto;overflow:hidden;margin-right:0.75rem;}
+.download-fixed .download-fixed-right a{display:block;height:2rem;line-height:2rem;margin-top:0.375rem;text-align:center;padding:0 0.5rem;background:#f5c12e;color:#fff;border-radius:3px;}
+.download-fixed .close-btn{position:absolute;left:0.325rem;top:-0.4rem;width:0.95rem;height:0.95rem;z-index:223;}
+.download-fixed .close-btn img{max-width:100%;}
+
+.mobileDownLoad{background:url('/m-resources/img/mobileDownLoad-bg.jpg') no-repeat center top;background-size:cover;position:fixed;left:0;top:0;height:100%;width:100%;}
+.mobileDownLoad .download-top{position:relative;z-index:22;width:60%;margin:30% auto 0 auto;text-align:center;color:#f5c12e;font-size:0.9rem;}
+.mobileDownLoad .download-top img{max-width:100%;}
+.mobileDownLoad .download-top ul,.mobileDownLoad .download-top ul li{list-style:none;margin:0;padding:0;}
+.mobileDownLoad .download-top .download-logo{margin:0 30%;}
+.mobileDownLoad .download-top p{margin:1.85rem 0 2rem 0;}
+.mobileDownLoad .download-top ul li{font-size:0;margin-bottom:1rem;}
+.mobileDownLoad .download-phone-bg{position:absolute;left:0;bottom:0;width:100%;height:30%;background:url('/m-resources/img/downloadPhonebg.png') no-repeat center top;background-size:80% auto;}
+@media screen and (min-width:320px){
+  .mobileDownLoad .download-top p{font-size:14px;}
+}
+@media screen and (min-width:375px){
+  .mobileDownLoad .download-top p{font-size:18px;}
+  .mobileDownLoad .download-top p{margin:1.85rem 0 3rem 0;}
+}
+@media screen and (min-width:414px){
+  .mobileDownLoad .download-top p{font-size:20px;}
+}
+@media screen and (min-width:768px){
+  .mobileDownLoad .download-top p{font-size:30px;}
+}
