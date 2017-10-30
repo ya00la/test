@@ -3,48 +3,54 @@
   <div ng-show="showKline" style="height:100%" class="">
     <div class="chartDetail" id="chartCtrlFixed" hidden="">
       <div>
-        <lable class="ng-binding">O</lable><span id="open"></span>
-        <lable class="ng-binding">H</lable><span id="high"></span>
-        <lable class="ng-binding">L</lable><span id="low"></span>
-        <lable class="ng-binding">C</lable><span id="close"></span>
-        <lable class="ng-binding">Inc</lable><span id="updownPercent"></span>
+        <span class="ng-binding">O</span><span id="open"></span>
+        <span class="ng-binding">H</span><span id="high"></span>
+        <span class="ng-binding">L</span><span id="low"></span>
+        <span class="ng-binding">C</span><span id="close"></span>
+        <span class="ng-binding">Inc</span><span id="updownPercent"></span>
       </div>
+    </div>
       <div id="showPage" style="height:100%;position:relative;">
-        <ul ng-init="jszbLists=false" class="filter" ng-click="jszbLists=false;">
-                <li ng-class="{true:'cur',false:''}[curIndex==0]" class="cur"><span ng-click="slideLine();setTimeLine(0);" class="ng-binding">Time</span></li>
-                <li ng-class="{true:'cur',false:''}[curIndex==6]"><span ng-click="slideLine();getByInterval('86400',6);" class="ng-binding">1Day</span></li>
-                <li ng-class="{true:'cur',false:''}[curIndex==7]"><span ng-click="slideLine();getByInterval('604800',7);" class="ng-binding">1Week</span></li>
-                <li ng-class="{true:'cur',false:''}[curIndex<6&amp;&amp;curIndex>0]">
-            <span ng-click="jszbLists=!jszbLists;stopPropagation1($event);">
-               <div style="display:inline" ng-switch="curIndex">
-                  <!-- ngSwitchWhen: 1 -->
-                  <!-- ngSwitchWhen: 2 -->
-                  <!-- ngSwitchWhen: 3 -->
-                  <!-- ngSwitchWhen: 4 -->
-                  <!-- ngSwitchWhen: 5 -->
-                  <!-- ngSwitchDefault:  -->
-                  <label ng-switch-default="" class="ng-binding ng-scope">Min</label>
-               </div>
-              <div style="display:inline">
-                <img id="iconshowM" ng-class="{true:'rotat',false:''}[jszbLists]" src="/exchange/resources/img/down1.png">
-              </div>
-            </span>
-                    <div class="jszb-lists clearBottom jszbListsHide" ng-click="stopPropagation1($event)">
+        <ul ng-init="jszbLists=false" class="filter" @click="jszbLists=false;" ref="tabfilter">
+                <li :class="{'cur':curIndex==0}">
+                  <span @click="setTimeLine(0);" class="ng-binding">Time</span>
+                </li>
+                <li :class="{'cur':curIndex==6}">
+                  <span @click="getByInterval('86400',6);" class="ng-binding">1Day</span>
+                </li>
+                <li :class="{'cur':curIndex==7}">
+                  <span @click="getByInterval('604800',7);" class="ng-binding">1Week</span>
+                </li>
+                <li :class="{'cur':curIndex<6&&curIndex>0}">
+                  <span @click="jszbLists=!jszbLists;stopPropagation1($event);">
+                     <div style="display:inline" ng-switch="curIndex">
+                        <!-- ngSwitchWhen: 1 -->
+                        <!-- ngSwitchWhen: 2 -->
+                        <!-- ngSwitchWhen: 3 -->
+                        <!-- ngSwitchWhen: 4 -->
+                        <!-- ngSwitchWhen: 5 -->
+                        <!-- ngSwitchDefault:  -->
+                        <span ng-switch-default="" class="ng-binding ng-scope">Min</span>
+                     </div>
+                    <div style="display:inline">
+                      <img id="iconshowM"  :class="{'rotat':jszbLists}" src="../assets/img/down1.png">
+                    </div>
+                  </span>
+                    <div :class="['jszb-lists clearBottom', jszbLists? 'jszbListsShow':'jszbListsHide']" @click="stopPropagation1($event)">
                         <!-- <div  class="arrow"></div> -->
-                        <img class="arrow" src="/exchange/resources/img/jian.png">
-                        <span class="btn ng-binding" ng-class="{true:'cur',false:''}[curIndex==1]" ng-click="getByInterval1('60',1);">1Min</span>
-                        <span class="btn ng-binding" ng-class="{true:'cur',false:''}[curIndex==2]" ng-click="getByInterval1('300',2)">5Mins</span>
-                        <span class="btn ng-binding" ng-class="{true:'cur',false:''}[curIndex==3]" ng-click="getByInterval1('900',3)">15Mins</span>
-                        <span class="btn ng-binding" ng-class="{true:'cur',false:''}[curIndex==4]" ng-click="getByInterval1('1800',4)">30Mins</span>
-                        <span class="btn ng-binding" style="margin-bottom: 0px;    border-bottom:0px" ng-class="{true:'cur',false:''}[curIndex==5]" ng-click="getByInterval1('3600',5)">60Mins</span>
+                        <img class="arrow" src="../assets/img/jian.png">
+                        <span :class="['btn ng-binding',{'cur':curIndex==1}]" @click="getByInterval1('60',1);">1Min</span>
+                        <span :class="['btn ng-binding',{'cur':curIndex==2}]" @click="getByInterval1('300',2)">5Mins</span>
+                        <span :class="['btn ng-binding',{'cur':curIndex==3}]" @click="getByInterval1('900',3)">15Mins</span>
+                        <span :class="['btn ng-binding',{'cur':curIndex==4}]" @click="getByInterval1('1800',4)">30Mins</span>
+                        <span :class="['btn ng-binding',{'cur':curIndex==5}]" style="margin-bottom: 0px;    border-bottom:0px" @click="getByInterval1('3600',5)">60Mins</span>
                     </div>
                 </li>
-                <div class="border-line" style="left: 15px; width: 86px;"></div>
+                <div class="border-line" :style="borderLine"></div>
             </ul>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -55,6 +61,9 @@ export default {
   name: 'Candle',
   data () {
     return {
+      curIndex: 0,
+      jszbLists: false,
+      borderLine: {left: '13px', width: '73px'}
     }
   },
   components: {
@@ -63,7 +72,44 @@ export default {
   },
   computed: {
   },
+  watch: {
+    curIndex (val) {
+      setTimeout(() => {
+        this.slideLine()
+      }, 100)
+    }
+  },
   methods: {
+    getByInterval (t, n) {
+      if (this.curIndex === n) return
+      this.curIndex = n
+      // v(t, !0)
+      // sessionStorage.klineCurIndex = e.curIndex
+      // y = n
+    },
+    getByInterval1 (t, n) {
+      if (this.curIndex === n) return
+      this.curIndex = n
+      // v(t, !0)
+      // sessionStorage.klineCurIndex = this.curIndex
+      this.jszbLists = !1
+      // this.showRight = !1
+      // y = n
+    },
+    stopPropagation1 (e) {
+      e.stopPropagation()
+    },
+    slideLine () {
+      let el = this.$el.getElementsByClassName('cur')[0]
+      console.log(el.offsetLeft)
+      this.borderLine = {left: el.offsetLeft + 'px', width: el.clientWidth + 'px'}
+    },
+    setTimeLine (t) {
+      if (this.curIndex === t) return
+      this.curIndex = t
+    // v("0", !1), e.curIndex = t, sessionStorage.klineCurIndex = e.curIndex, y = t
+    }
+
   }
 }
 </script>
@@ -269,7 +315,19 @@ export default {
             bottom: -3px;
             transition: all 0.1s ease-in-out;
             border-bottom: 2px solid #fcaf3b;
+            /*transition: left .1s cubic-bezier(.645,.045,.355,1),right .1s cubic-bezier(.645,.045,.355,1) .1s;*/
+
         }
+/*        .nav .tabs-active-bar {
+    content: '';
+    position: absolute;
+    left: 16px;
+    right:600px;
+    bottom: 0;
+    height: 2px;
+    background-color: #5CB975;
+    transition: left .1s cubic-bezier(.645,.045,.355,1),right .1s cubic-bezier(.645,.045,.355,1) .09s;
+}*/
 
         .tab li {
             transition: all 0.2s ease-in-out;

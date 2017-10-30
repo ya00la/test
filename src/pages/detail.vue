@@ -47,11 +47,15 @@
 
         <div class="kline-box">
           <div class="kline-tab">
-            <span ng-click="klineSwitch(true)" ng-class="{true:'cur',false:''}[isKline]" class="ng-binding cur"><i class="font font-kline"></i>Candle</span>
-              <span ng-click="klineSwitch(false)" ng-class="{true:'',false:'cur'}[isKline]" class="ng-binding"><i class="font font-depth"></i>Depth</span>
+            <span @click="klineSwitch(true)" :class="['ng-binding',{'cur':isKline}]">
+              <i class="font font-kline"></i>Candle
+            </span>
+            <span @click="klineSwitch(false)" :class="['ng-binding',{'cur':!isKline}]" >
+              <i class="font font-depth"></i>Depth
+            </span>
           </div>
         </div>
-        <candle></candle>
+        <candle v-show="isKline"></candle>
       </div>
     </div>
     </div>
@@ -66,12 +70,18 @@ export default {
   data () {
     return {
       cur_lang: 'en',
+      isKline: true,
       trades: [{'price': 240}, {'price': 540}],
       currentProduct: {'symbol': 'NEOBTC', 'tradedMoney': 1896.06920227, 'baseAssetUnit': '', 'active': true, ' minTrade': '0.01000000', 'baseAsset': 'NEO', 'activeSell': 395620.09, 'withdrawFee': '0', 'tickSize': '0.000001', 'prevClose': 0.004802, 'activeBuy': 0, 'volume': '395620.090000', 'high': '0.004996', 'lastAggTradeId': 1617464, 'decimalPlaces': 8, 'low': '0.004673', 'quoteAssetUnit': '฿', 'matchingUnitType': 'STANDARD', 'close': '0.004989', 'quoteAsset': 'BTC', 'open': '0.004802', 'status': 'TRADING', 'minQty': '1E-8'}
     }
   },
   components: {
     candle
+  },
+  methods: {
+    klineSwitch (val) {
+      this.isKline = val
+    }
   }
 }
 </script>
